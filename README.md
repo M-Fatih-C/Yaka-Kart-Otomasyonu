@@ -40,7 +40,3 @@ Repo’da örnekleri mevcut:
 
 ## EXE (PyInstaller) - Önerilen
 Detaylar: `docs/BUILD.md`
-
-## Güvenlik / Gizlilik
-Gerçek personel/hasta verisi, kurum içi yol/IP vb. bilgiler repo’ya eklenmemelidir.
-Örnek/demo için anonim dosyalar kullanın.
