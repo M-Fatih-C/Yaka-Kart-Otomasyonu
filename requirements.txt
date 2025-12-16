@@ -1,0 +1,6 @@
+pymupdf>=1.23
+python-docx>=1.1
+Pillow>=10.0
+# Optional:
+# rarfile>=4.0
+# tkinterdnd2>=0.4.2

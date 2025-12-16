@@ -1,0 +1,20 @@
+{
+  "Varsayılan": {
+    "card_height_cm": 5.81,
+    "card_width_cm": 9.2,
+    "front_margins": {
+      "top": 1.27,
+      "bottom": 1.27,
+      "left": 1.27,
+      "right": 1.27
+    },
+    "back_margins": {
+      "top": 1.27,
+      "bottom": 1.27,
+      "left": 0.7,
+      "right": 1.27
+    },
+    "render_dpi": 300,
+    "cards_per_page": 8
+  }
+}

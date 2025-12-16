@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyd
+*.so
+*.egg-info/
+dist/
+build/
+
+# Virtual env
+.venv/
+venv/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# App runtime outputs (DO NOT COMMIT)
+output/
+temp_extracted/
+config.json
+profiles.json
+stats.json
+
+# PyInstaller
+*.spec
