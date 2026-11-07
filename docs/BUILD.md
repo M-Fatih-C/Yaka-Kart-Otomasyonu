@@ -1,26 +1,21 @@
-# Build (Windows) - PyInstaller
+# Windows packaging
 
-## 1) Ortam
-```bash
+Build on Windows using Python with Tk support and a clean virtual environment.
+
+```powershell
 python -m venv .venv
-.venv\Scripts\activate
-pip install -r requirements.txt
-pip install pyinstaller
+.venv\Scripts\Activate.ps1
+python -m pip install -e . pyinstaller
+pyinstaller --onefile --windowed --name MedarYakaKart --paths src scripts/launch_app.py
 ```
 
-## 2) Tek dosya EXE
-```bash
-pyinstaller -F -w -n MedarYakaKart ^
-  --icon assets\medar.ico ^
-  -m medar_yakakart
-```
+The output is `dist/MedarYakaKart.exe`. `scripts/launch_app.py` imports the package
+by its absolute name; the package's relative `__main__` import is not used as a
+standalone script. No icon flag is supplied because the previously documented
+`assets/medar.ico` is not present. Add an icon only after providing a licensed asset.
 
-- `-w`: konsol penceresini kapatır (GUI)
-- `-m medar_yakakart`: modül entrypoint’i (`python -m medar_yakakart`) kullanır
-
-## 3) Çıktılar
-- `dist/MedarYakaKart.exe`
-
-## 4) Notlar
-- `7z.exe` paketlenmek istenirse exe yanına koyun veya installer ile ekleyin.
-- `rarfile` kullanıyorsanız: sistemde unrar/7z gereksinimlerini ayrıca dokümante edin.
+If enabling RAR or drag/drop, install and package the optional dependencies and
+review the external extractor's distribution terms. Test the executable on a
+clean Windows account with synthetic PDFs, writable settings/output paths and
+an actual duplex printer before distributing it. The audit did not build a
+Windows executable or validate printer alignment.
